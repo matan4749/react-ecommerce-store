@@ -1,248 +1,109 @@
-# 🛍️ ShopHub - Modern E-commerce Store
+<div align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,8,30&height=180&section=header&text=React%20E-Commerce%20Store&fontSize=50&fontColor=fff&animation=fadeIn&fontAlignY=38&desc=Modern%20Shopping%20Experience&descAlignY=58&descSize=18" width="100%"/>
+</div>
 
-Professional e-commerce application built with **React 18**, featuring shopping cart, product filtering, and checkout flow.
+<div align="center">
 
-![React](https://img.shields.io/badge/React-18.2-blue.svg)
-![Vite](https://img.shields.io/badge/Vite-5.0-purple.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
+[![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-5-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
+[![React Router](https://img.shields.io/badge/React_Router-6-CA4245?style=for-the-badge&logo=react-router)](https://reactrouter.com)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+
+</div>
+
+<br/>
+
+## 🛒 Overview
+
+A **fully-featured e-commerce store** built with React 18 and Vite. Browse products, manage your cart, and complete checkout — all in a polished, responsive interface.
+
+<br/>
+
+## 🖼️ Screenshots
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center"><strong>Home / Product Catalog</strong></td>
+      <td align="center"><strong>Shopping Cart</strong></td>
+    </tr>
+    <tr>
+      <td><img src="https://via.placeholder.com/480x300/1a1a2e/61DAFB?text=Product+Catalog" width="480"/></td>
+      <td><img src="https://via.placeholder.com/480x300/16213e/61DAFB?text=Shopping+Cart" width="480"/></td>
+    </tr>
+    <tr>
+      <td align="center"><strong>Product Detail</strong></td>
+      <td align="center"><strong>Checkout</strong></td>
+    </tr>
+    <tr>
+      <td><img src="https://via.placeholder.com/480x300/0f3460/61DAFB?text=Product+Detail" width="480"/></td>
+      <td><img src="https://via.placeholder.com/480x300/533483/61DAFB?text=Checkout+Flow" width="480"/></td>
+    </tr>
+  </table>
+</div>
+
+<br/>
 
 ## ✨ Features
 
-### 🛒 Shopping Cart
-- **Add to Cart** - Quick add from product cards
-- **Quantity Management** - Increase/decrease quantities
-- **Remove Items** - Easy item removal
-- **Persistent Storage** - Cart saved to localStorage
-- **Real-time Updates** - Instant cart count updates
+- 🏪 **Product Catalog** — Grid layout with search and category filters
+- 🛒 **Cart Management** — Add, remove, update quantities with persistent state
+- 💳 **Checkout Flow** — Multi-step checkout with form validation
+- 🔔 **Toast Notifications** — Instant feedback on all cart actions
+- 📱 **Responsive** — Works beautifully on mobile and desktop
+- ⚡ **Fast** — Vite-powered with lightning-fast HMR
 
-### 📦 Products
-- **12+ Products** - Diverse product catalog
-- **Category Filtering** - Filter by Electronics, Sports, Home, Accessories
-- **Product Details** - Detailed product pages
-- **Ratings & Reviews** - Star ratings display
-- **Stock Information** - Real-time stock availability
+<br/>
 
-### 🎨 User Experience
-- **Responsive Design** - Works on all devices
-- **Toast Notifications** - User-friendly feedback
-- **Smooth Animations** - Hover effects and transitions
-- **Modern UI** - Clean, professional interface
+## 🛠️ Tech Stack
 
-### 💳 Checkout
-- **Order Summary** - Clear pricing breakdown
-- **Shipping Form** - Complete shipping information
-- **Payment Form** - Card payment simulation
-- **Order Confirmation** - Success notifications
+| Layer | Technology |
+|-------|-----------|
+| Framework | React 18 |
+| Build Tool | Vite 5 |
+| Routing | React Router 6 |
+| Icons | React Icons |
+| Notifications | React Toastify |
+| State | React Context API |
 
-## 🚀 Quick Start
+<br/>
 
-### Installation
+## 🚀 Getting Started
 
 ```bash
-# Clone repository
+# Clone
 git clone https://github.com/matan4749/react-ecommerce-store.git
 cd react-ecommerce-store
 
-# Install dependencies
+# Install
 npm install
 
-# Start development server
+# Dev server
 npm run dev
-```
 
-Visit: `http://localhost:3000`
-
-### Build for Production
-
-```bash
+# Build for production
 npm run build
-npm run preview
 ```
+
+<br/>
 
 ## 📁 Project Structure
 
 ```
-react-ecommerce-store/
-├── src/
-│   ├── components/         # Reusable components
-│   │   ├── Header.jsx     # Navigation header
-│   │   └── ProductCard.jsx # Product card component
-│   ├── pages/             # Page components
-│   │   ├── Home.jsx       # Homepage with products
-│   │   ├── ProductDetail.jsx # Product details page
-│   │   ├── Cart.jsx       # Shopping cart
-│   │   └── Checkout.jsx   # Checkout form
-│   ├── context/           # React Context
-│   │   └── CartContext.jsx # Cart state management
-│   ├── data/              # Static data
-│   │   └── products.js    # Product catalog
-│   ├── App.jsx            # Main app component
-│   ├── main.jsx           # Entry point
-│   └── index.css          # Global styles
-├── index.html
-├── package.json
-└── vite.config.js
+src/
+├── components/     # Reusable UI (Navbar, ProductCard, CartItem...)
+├── context/        # Cart state via React Context
+├── data/           # Product catalog data
+├── pages/          # Home, Product, Cart, Checkout pages
+├── App.jsx         # Root component with routing
+└── main.jsx        # Entry point
 ```
 
-## 🎯 Key Components
+<br/>
 
-### CartContext
+<div align="center">
 
-Manages global cart state using React Context:
+Made with ❤️ by [Matan Amar](https://matan.life)
 
-```jsx
-import { useCart } from './context/CartContext'
-
-function MyComponent() {
-  const {
-    cartItems,      // Array of cart items
-    addToCart,      // Add product to cart
-    removeFromCart, // Remove product
-    updateQuantity, // Update item quantity
-    getCartTotal,   // Get total price
-    getCartCount    // Get total items
-  } = useCart()
-}
-```
-
-### Product Data
-
-Products defined in `src/data/products.js`:
-
-```js
-{
-  id: 1,
-  name: 'Product Name',
-  category: 'Electronics',
-  price: 199.99,
-  description: 'Product description',
-  image: 'image-url',
-  rating: 4.5,
-  stock: 25
-}
-```
-
-## 🎨 Styling
-
-- **CSS Variables** for theming
-- **Gradient Backgrounds** for visual appeal
-- **Responsive Grid Layout** for products
-- **Flexbox** for component layouts
-- **Hover Effects** for interactivity
-
-### Color Scheme
-
-```css
---primary: #667eea;    /* Primary brand color */
---secondary: #764ba2;  /* Secondary accent */
---success: #06d6a0;    /* Success messages */
---danger: #ef476f;     /* Danger/Remove actions */
-```
-
-## 📱 Pages
-
-### Home (`/`)
-- Product grid with filtering
-- Category buttons
-- Quick add to cart
-
-### Product Detail (`/product/:id`)
-- Full product information
-- Large product image
-- Ratings and reviews
-- Add to cart with quantity
-
-### Cart (`/cart`)
-- Cart items list
-- Quantity controls
-- Order summary
-- Proceed to checkout
-
-### Checkout (`/checkout`)
-- Shipping form
-- Payment information
-- Order review
-- Place order
-
-## 🔧 Technologies
-
-- **React 18** - UI library
-- **React Router** - Navigation
-- **React Icons** - Icon library
-- **React Toastify** - Notifications
-- **Vite** - Build tool
-- **localStorage** - Cart persistence
-
-## 💡 Features Breakdown
-
-### Cart Management
-
-```jsx
-// Add item
-addToCart(product)
-
-// Update quantity
-updateQuantity(productId, newQuantity)
-
-// Remove item
-removeFromCart(productId)
-
-// Clear cart
-clearCart()
-```
-
-### Category Filtering
-
-```jsx
-const filteredProducts = selectedCategory === 'All'
-  ? products
-  : products.filter(p => p.category === selectedCategory)
-```
-
-### LocalStorage Persistence
-
-Cart automatically saves to localStorage and restores on page load.
-
-## 🎓 Learning Points
-
-This project demonstrates:
-- **React Context API** for state management
-- **React Router** for multi-page apps
-- **Component composition** patterns
-- **Hooks** (useState, useEffect, useContext, useNavigate)
-- **Event handling** in React
-- **Conditional rendering**
-- **Array methods** (map, filter, reduce)
-- **localStorage** API
-- **CSS Grid & Flexbox** layouts
-
-## 🚀 Potential Enhancements
-
-- [ ] User authentication
-- [ ] Product search functionality
-- [ ] Wishlist feature
-- [ ] Product reviews & ratings
-- [ ] Order history
-- [ ] Admin panel
-- [ ] Payment gateway integration
-- [ ] Image zoom on product detail
-- [ ] Related products suggestions
-- [ ] Dark mode toggle
-
-## 📝 License
-
-MIT License - free to use for learning and projects
-
-## 👨‍💻 Author
-
-**Matan Amar**
-- GitHub: [@matan4749](https://github.com/matan4749)
-- Portfolio: Modern React Developer
-
-## 🤝 Contributing
-
-Contributions welcome! Feel free to submit issues and pull requests.
-
----
-
-**⭐ Star this repository if you find it useful!**
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,8,30&height=80&section=footer" width="100%"/>
+</div>
