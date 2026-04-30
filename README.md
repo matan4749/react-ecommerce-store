@@ -24,20 +24,12 @@ A **fully-featured e-commerce store** built with React 18 and Vite. Browse produ
 <div align="center">
   <table>
     <tr>
-      <td align="center"><strong>Home / Product Catalog</strong></td>
+      <td align="center"><strong>Product Catalog</strong></td>
       <td align="center"><strong>Shopping Cart</strong></td>
     </tr>
     <tr>
-      <td><img src="https://via.placeholder.com/480x300/1a1a2e/61DAFB?text=Product+Catalog" width="480"/></td>
-      <td><img src="https://via.placeholder.com/480x300/16213e/61DAFB?text=Shopping+Cart" width="480"/></td>
-    </tr>
-    <tr>
-      <td align="center"><strong>Product Detail</strong></td>
-      <td align="center"><strong>Checkout</strong></td>
-    </tr>
-    <tr>
-      <td><img src="https://via.placeholder.com/480x300/0f3460/61DAFB?text=Product+Detail" width="480"/></td>
-      <td><img src="https://via.placeholder.com/480x300/533483/61DAFB?text=Checkout+Flow" width="480"/></td>
+      <td><img src="https://raw.githubusercontent.com/matan4749/react-ecommerce-store/main/docs/screenshot-home.png" width="480"/></td>
+      <td><img src="https://raw.githubusercontent.com/matan4749/react-ecommerce-store/main/docs/screenshot-cart.png" width="480"/></td>
     </tr>
   </table>
 </div>
@@ -46,9 +38,9 @@ A **fully-featured e-commerce store** built with React 18 and Vite. Browse produ
 
 ## ✨ Features
 
-- 🏪 **Product Catalog** — Grid layout with search and category filters
-- 🛒 **Cart Management** — Add, remove, update quantities with persistent state
-- 💳 **Checkout Flow** — Multi-step checkout with form validation
+- 🏪 **Product Catalog** — Grid layout with category filters (Electronics, Sports, Home, Accessories)
+- 🛒 **Cart Management** — Add, remove, update quantities with real-time total
+- 💳 **Checkout Flow** — Multi-step checkout with order summary
 - 🔔 **Toast Notifications** — Instant feedback on all cart actions
 - 📱 **Responsive** — Works beautifully on mobile and desktop
 - ⚡ **Fast** — Vite-powered with lightning-fast HMR
@@ -71,18 +63,10 @@ A **fully-featured e-commerce store** built with React 18 and Vite. Browse produ
 ## 🚀 Getting Started
 
 ```bash
-# Clone
 git clone https://github.com/matan4749/react-ecommerce-store.git
 cd react-ecommerce-store
-
-# Install
 npm install
-
-# Dev server
 npm run dev
-
-# Build for production
-npm run build
 ```
 
 <br/>
@@ -91,12 +75,11 @@ npm run build
 
 ```
 src/
-├── components/     # Reusable UI (Navbar, ProductCard, CartItem...)
+├── components/     # Navbar, ProductCard, CartItem...
 ├── context/        # Cart state via React Context
 ├── data/           # Product catalog data
-├── pages/          # Home, Product, Cart, Checkout pages
-├── App.jsx         # Root component with routing
-└── main.jsx        # Entry point
+├── pages/          # Home, Cart, Checkout pages
+└── App.jsx         # Root with routing
 ```
 
 <br/>
